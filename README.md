@@ -1,10 +1,10 @@
-jquery-isystkSlider
+jquery-zoomSlider
 ====
 
 ## Description
 
 ## Demo
-https://demo.isystk.com/jquery-isystkSlider/
+https://demo.isystk.com/jquery-zoomSlider/
 
 ## VS. 
 
@@ -30,7 +30,7 @@ $ open http://localhost:3000/
 
 ## Licence
 
-[MIT](https://github.com/isystk/jquery-isystkSlider/LICENCE)
+[MIT](https://github.com/isystk/jquery-zoomSlider/LICENCE)
 
 ## Author
 

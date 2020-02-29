@@ -1,6 +1,7 @@
 import './assets/css/normalize.css';
 import './assets/css/prettify.css';
 import './assets/index.css';
+import './assets/images/close.png';
 
 var $ = require('./assets/js/jquery-3.4.1.min.js');
 window.$ = $;

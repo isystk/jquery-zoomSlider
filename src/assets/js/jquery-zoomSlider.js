@@ -66,7 +66,7 @@
 
 				var mainFlame = $([
 					'<div class="isystk-overlay">',
-						'<a href="#" class="js-close"><span class="close"><img src="' + imageUrl + '/close.png" width="30px"/></span></a>',
+						'<a href="#" class="js-close close"><img src="' + imageUrl + '/close.png" width="30px"/></a>',
 						'<div class="wrap">',
 							'<div class="js-slider isystkSlider">',
 								'<div class="view-layer">',
@@ -333,7 +333,7 @@
 			// 上下左右に余白を追加する。
 			var appendMargin = function() {
 				// 画面上下にマージン設定（画像）
-				mainFlame.slider.find('.childKey img.targetImg').each(function() {
+				mainFlame.slider.find('.childKey img').each(function() {
 					var photo = $(this),
 						oheight = photo.attr('oheight') || 0,
 						owidth = photo.attr('owidth') || 0;

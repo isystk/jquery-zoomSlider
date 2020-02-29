@@ -741,6 +741,7 @@ visibility: hidden;
 transition: .1s linear;
 }
 .isystk-overlay .wrap {
+/* overflow: hidden; */
 background-color: #000;
 padding: 10px;
 }
@@ -763,9 +764,10 @@ animation: open-animation .5s ease 0s 1 forwards;
 .isystk-overlay .close {
 position: absolute;
 right: 0;
-margin: 5px;
+margin: 10px 15px;
 zoom: 100%;
 color: #333;
+z-index:1;
 }
 		
 	
