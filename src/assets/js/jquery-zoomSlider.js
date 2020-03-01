@@ -23,7 +23,6 @@
 				targetClass = params.targetClass,
 				target = screen.find(targetClass),
 				animateType = params.animateType,
-				imageUrl = params.imageUrl,
 				slideSpeed = params.slideSpeed,
 				carousel = params.carousel,
 				autoSlide = params.autoSlide,
@@ -66,7 +65,7 @@
 
 				var mainFlame = $([
 					'<div class="isystk-overlay">',
-						'<a href="#" class="js-close close"><img src="'+imageUrl+'/close.png" width="30px"/></a>',
+						'<a href="#" class="js-close close"></a>',
 						'<div class="wrap">',
 							'<div class="js-slider isystkSlider">',
 								'<div class="view-layer">',
@@ -74,8 +73,8 @@
 									'</ul>',
 								'</div>',
 								'<div>',
-									'<p class="next-btn"><a href="#"><img src="'+imageUrl+'/btn-next.png" alt="次へ" ></a></p>',
-									'<p class="prev-btn"><a href="#"><img src="'+imageUrl+'/btn-prev.png" alt="前へ" ></a></p>',
+									'<p><a href="#" class="next-btn"></a></p>',
+									'<p><a href="#" class="prev-btn"></a></p>',
 								'</div>',
 							'</div>',
 						'</div>',
@@ -332,14 +331,14 @@
 						oheight = photo.attr('oheight') || 0,
 						owidth = photo.attr('owidth') || 0;
 
-					photo.closest('.childKey').css('margin-top', '');
+					photo.closest('.childKey').css('padding-top', '');
 
 					var x = Math.floor(oheight * $(window).width() / owidth);
-					var margin = Math.floor(($(window).height() - x) / 2) || 0;
-					if (0 < margin) {
-						photo.closest('.childKey').css('margin-top', margin + 'px');
+					var padding = Math.floor(($(window).height() - x) / 2) || 0;
+					if (0 < padding) {
+						photo.closest('.childKey').css('padding-top', padding + 'px');
 					} else {
-						photo.closest('.childKey').css('margin-top', '0px');
+						photo.closest('.childKey').css('padding-top', '0px');
 					}
 					
 				});
@@ -424,7 +423,6 @@
 	$.fn.zoomSlider.defaults = {
 		'targetClass': 'img' // 拡大する画像要素
 		, 'animateType': ANIMATE_TYPE.SLIDE // アニメーションの種類
-		, 'imageUrl': './images' // 画像パス
 		, 'slideSpeed': 300 // スライド速度
 		, 'carousel': false // ローテートさせるかどうか
 		, 'autoSlide': false // 自動スライドさせるどうか

@@ -126,7 +126,6 @@
             <ul class="point">
               <li>targetClass(default:img) ・・・ 拡大する画像要素</li>
               <li>animateType(default:ANIMATE_TYPE.SLIDE) ・・・ アニメーションの種類</li>
-              <li>imageUrl(default:./images) ・・・ 画像パス</li>
               <li>slideSpeed(default:300) ・・・ スライド速度</li>
               <li>carousel(default:false) ・・・ ローテートさせるかどうか</li>
               <li>autoSlide(default:false) ・・・ 自動スライドさせるどうか</li>
@@ -175,8 +174,7 @@ visibility: hidden;
 transition: .1s linear;
 }
 .isystk-overlay .wrap {
-padding: 10px;
-background: none;
+background: #fff;
 max-width:100%;
 }
 .isystk-overlay.open {
@@ -185,13 +183,13 @@ animation: open-animation .5s ease 0s 1 forwards;
 }
 @keyframes open-animation {
 0% {
-transform: scaleY(.1) scaleX(.1);
+  transform: scaleY(.1) scaleX(.1);
 }
 50% {
-transform: scaleY(1) scaleX(.1);
+  transform: scaleY(1) scaleX(.1);
 }
 100% {
-transform: scaleY(1) scaleX(1);
+  transform: scaleY(1) scaleX(1);
 }
 }
 .isystk-overlay .close {
@@ -202,7 +200,25 @@ zoom: 100%;
 color: #333;
 z-index:1;
 }
-
+.isystk-overlay .close {
+background: url('./images/close.png') 0 0 no-repeat;
+background-size:100% auto;
+width: 30px;
+height: 30px;
+}
+.isystk-overlay .next-btn {
+background: url('./images/btn-next.png') 0 0 no-repeat;
+background-size:100% auto;
+width: 30px;
+height: 30px;
+}
+.isystk-overlay .prev-btn {
+background: url('./images/btn-prev.png') 0 0 no-repeat;
+background-size:100% auto;
+width: 30px;
+height: 30px;
+}
+  
 
 /* 画像スライダー */
 .isystkSlider {
@@ -233,6 +249,23 @@ width: 30px;
 }
 .isystkSlider .next-btn{
 right: 0;
+}
+
+/*ギャラリー*/
+.entry-content .wp-block-gallery ul{
+border:none;
+}
+.entry-content .wp-block-gallery ul li:before {
+content: none !important;
+}
+.entry-content .wp-block-gallery li{
+float:left;
+}
+.entry-content .wp-block-gallery li p{
+margin:0 5px 0 0;
+border:solid 1px #dedede;
+background:#fff;
+padding:3px;
 }
 </pre>
             <h2 id="source">ソースコード</h2>
