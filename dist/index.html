@@ -23,7 +23,7 @@
             <h2>デモ</h2>
 
             <div class="js-zoomSlider">
-              <div class="view-layer">
+              <div class="wp-block-gallery">
                 <ul>
                   <li>
                     <p>
@@ -85,11 +85,160 @@
                       <img src="./images/photo12.jpg" width="103px">
                     </p>
                   </li>
+                  <li>
+                    <p>
+                      <img src="./images/photo13.jpg" width="103px">
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <img src="./images/photo14.jpg" width="103px">
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <img src="./images/photo15.jpg" width="103px">
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <img src="./images/photo16.jpg" width="103px">
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <img src="./images/photo21.jpg" width="103px">
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <img src="./images/photo22.jpg" width="103px">
+                    </p>
+                  </li>
                 </ul>
               </div>
+              <div class="clearfix"></div>
             </div>
-          </div>
 
+            <h2 id="usage">使い方</h2>
+            <p>用途に応じて以下のようなオプションが用意されています。必要に応じて使い分けてください。</p>
+            <h4>オプション一覧</h4>
+            <ul class="point">
+              <li>targetClass(default:img) ・・・ 拡大する画像要素</li>
+              <li>animateType(default:ANIMATE_TYPE.SLIDE) ・・・ アニメーションの種類</li>
+              <li>imageUrl(default:./images) ・・・ 画像パス</li>
+              <li>slideSpeed(default:300) ・・・ スライド速度</li>
+              <li>carousel(default:false) ・・・ ローテートさせるかどうか</li>
+              <li>autoSlide(default:false) ・・・ 自動スライドさせるどうか</li>
+              <li>autoSlideInterval(default:5000) ・・・ 自動スライドさせる間隔(ミリ秒)</li>
+              <li>hoverPause(default:false) ・・・ 子要素にマウスオーバーすると自動スライドを一時停止する。</li>
+              <li>slideCallBack(default:null) ・・・ スライド後に処理を行うコールバック(本プラグインで想定していない処理はここでカスタマイズする)</li>
+              <li>openCallBack(default:null) ・・・ 拡大表示後のコールバック</li>
+              <li>arrayCnt(default:20) ・・・ 初期表示でロードする拡大画像内要素の数</li>
+            </ul>
+            <h4>Javascript</h4>
+            <pre class="code">
+&lt;script src="https://demo.isystk.com/jquery-isystkOverlay/js/jquery-isystkOverlay.js"&gt;&lt;/script&gt;
+&lt;script src="https://demo.isystk.com/jquery-isystkSlider/js/jquery-isystkSlider.js"&gt;&lt;/script&gt;
+&lt;script src="https://demo.isystk.com/jquery-zoomSlider/js/jquery-zoomSlider.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(function() {
+	$('.js-zoomSlider').zoomSlider({
+		'animateType': $.fn.zoomSlider.ANIMATE_TYPE.SLIDE,
+		'carousel': true,
+		'isFullScreen': true,
+		'slideCallBack': function(data) {
+		}
+	});
+});
+&lt;/script&gt;
+</pre>
+            <h4>Css</h4>
+            <pre class="code">
+/* オーバーレイ */
+#overlay-background {
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-color:#0e0e0e;
+opacity:0.5;
+z-index:1000
+}
+.isystk-overlay {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1100;
+visibility: hidden;
+transition: .1s linear;
+}
+.isystk-overlay .wrap {
+/* overflow: hidden; */
+padding: 10px;
+background: none;
+}
+.isystk-overlay.open {
+visibility: visible;
+animation: open-animation .5s ease 0s 1 forwards;
+}
+@keyframes open-animation {
+0% {
+transform: scaleY(.1) scaleX(.1);
+}
+50% {
+transform: scaleY(1) scaleX(.1);
+}
+100% {
+transform: scaleY(1) scaleX(1);
+}
+}
+.isystk-overlay .close {
+position: absolute;
+right: 0;
+margin: 10px 15px;
+zoom: 100%;
+color: #333;
+z-index:1;
+}
+
+
+/* 画像スライダー */
+.isystkSlider {
+position: relative;
+max-width: 100%;
+overflow: hidden;
+}
+.isystkSlider .view-layer {
+max-width: 100%;
+overflow: hidden;
+}
+.isystkSlider ul.parent{
+margin-bottom:10px;
+}
+.isystkSlider li.child{
+float:left;
+}
+.isystkSlider .prev-btn,
+.isystkSlider .next-btn{
+position: absolute;
+top: 50%;
+margin-top: -1em;
+width: 30px;
+}
+.isystkSlider .prev-btn img,
+.isystkSlider .next-btn img{
+width: 30px;
+}
+.isystkSlider .next-btn{
+right: 0;
+}
+</pre>
+            <h2 id="source">ソースコード</h2>
+            <a href="https://github.com/isystk/jquery-zoomSlider">https://github.com/isystk/jquery-zoomSlider</a>
+            
+          </div>
         </article>
       </main>
       <aside class="side-left">

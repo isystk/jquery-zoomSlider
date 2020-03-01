@@ -2,6 +2,8 @@ import './assets/css/normalize.css';
 import './assets/css/prettify.css';
 import './assets/index.css';
 import './assets/images/close.png';
+import './assets/images/btn-next.png';
+import './assets/images/btn-prev.png';
 
 var $ = require('./assets/js/jquery-3.4.1.min.js');
 window.$ = $;

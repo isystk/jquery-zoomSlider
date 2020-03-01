@@ -66,12 +66,16 @@
 
 				var mainFlame = $([
 					'<div class="isystk-overlay">',
-						'<a href="#" class="js-close close"><img src="' + imageUrl + '/close.png" width="30px"/></a>',
+						'<a href="#" class="js-close close"><img src="./images/close.png" width="30px"/></a>',
 						'<div class="wrap">',
 							'<div class="js-slider isystkSlider">',
 								'<div class="view-layer">',
 									'<ul class="parentKey">',
 									'</ul>',
+								'</div>',
+								'<div>',
+									'<p class="next-btn"><a href="#"><img src="./images/btn-next.png" alt="次へ" ></a></p>',
+									'<p class="prev-btn"><a href="#"><img src="./images/btn-prev.png" alt="前へ" ></a></p>',
 								'</div>',
 							'</div>',
 						'</div>',
@@ -88,10 +92,6 @@
 
 			// 子要素を生成します。
 			var makeChild = function (mainFlame, page, callback) {
-
-				// if (mainFlame.slider.suspend) {
-				// 	mainFlame.slider.suspend(true);
-				// }
 
 				var num = (function findArrayNum(page) {
 					return Math.floor((page-1) / params.arrayCnt);
@@ -158,10 +158,6 @@
 								return;
 							}
 							photos.unbind('load');
-
-							// if (mainFlame.slider.suspend) {
-							// 	mainFlame.slider.suspend(false);
-							// }
 
 							callback(li);
 						});
@@ -255,7 +251,6 @@
 									});
 								}
 							}
-
 						})();
 
 						nowLoading = false;
@@ -270,7 +265,6 @@
 						// 画像上下の余白を調整する。
 						prepareDisplay(pageNo);
 
-						// mainFlame.css('height', $(window).height() + 'px').css('width', $(window).width() + 'px');
 						mainFlame.css('width', $(window).width() + 'px');
 					}
 				});

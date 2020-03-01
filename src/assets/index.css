@@ -733,20 +733,16 @@ z-index:1000
 position: absolute;
 top: 0;
 left: 0;
-width: 100%;
 z-index: 1100;
-background: #000;
-opacity: 0;
 visibility: hidden;
 transition: .1s linear;
 }
 .isystk-overlay .wrap {
 /* overflow: hidden; */
-background-color: #000;
 padding: 10px;
+background: none;
 }
 .isystk-overlay.open {
-opacity: 1;
 visibility: visible;
 animation: open-animation .5s ease 0s 1 forwards;
 }
@@ -801,3 +797,21 @@ width: 30px;
 .isystkSlider .next-btn{
 right: 0;
 }
+
+/*ギャラリー*/
+.entry-content .wp-block-gallery ul{
+border:none;
+}
+.entry-content .wp-block-gallery ul li:before {
+content: none !important;
+}
+.entry-content .wp-block-gallery li{
+float:left;
+}
+.entry-content .wp-block-gallery li p{
+margin:0 5px 0 0;
+border:solid 1px #dedede;
+background:#fff;
+padding:3px;
+}
+	
