@@ -66,7 +66,7 @@
 
 				var mainFlame = $([
 					'<div class="isystk-overlay">',
-						'<a href="#" class="js-close close"><img src="./images/close.png" width="30px"/></a>',
+						'<a href="#" class="js-close close"><img src="'+imageUrl+'/close.png" width="30px"/></a>',
 						'<div class="wrap">',
 							'<div class="js-slider isystkSlider">',
 								'<div class="view-layer">',
@@ -74,8 +74,8 @@
 									'</ul>',
 								'</div>',
 								'<div>',
-									'<p class="next-btn"><a href="#"><img src="./images/btn-next.png" alt="次へ" ></a></p>',
-									'<p class="prev-btn"><a href="#"><img src="./images/btn-prev.png" alt="前へ" ></a></p>',
+									'<p class="next-btn"><a href="#"><img src="'+imageUrl+'/btn-next.png" alt="次へ" ></a></p>',
+									'<p class="prev-btn"><a href="#"><img src="'+imageUrl+'/btn-prev.png" alt="前へ" ></a></p>',
 								'</div>',
 							'</div>',
 						'</div>',

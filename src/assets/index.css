@@ -196,7 +196,7 @@ height: 100%;
 --------------------------------------------------------------------*/
 
 .wrap{
-/* max-width:1200px; */
+max-width:1200px;
 margin:0 auto;
 /* sticky が効かなくなるのでコメントアウト
 overflow: hidden;
@@ -741,6 +741,7 @@ transition: .1s linear;
 /* overflow: hidden; */
 padding: 10px;
 background: none;
+max-width:100%;
 }
 .isystk-overlay.open {
 visibility: visible;
